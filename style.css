@@ -1,100 +1,157 @@
-h1 {
-    margin-top: 60px;
-    margin-bottom: 40px;
-}
 body { 
-    background-color: #041335;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(208, 201, 201);
     text-align: center;
     margin: 0;
 }
 
-nav {
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    
+.hero {
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: 0.3s;
-}
-nav a:hover {
-    color: violet;
+h1 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 40px;
 }
 
-h1 {
-    color: skyblue;
-    font-size: 24px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(122, 101, 101, 0.15);
+   
+    padding: 12px 60px;
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0px 0px;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 25px;
+}
+.logo img {
+    width: autp;
+    height: 65px;
+}
+.nav-right {
+   display: flex;
+   gap: 25px;
+}
+.nav-right a {
+    color: rgb(142, 136, 136);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.4s;
+
+    display: inline-block;
+    position: relative;
+}
+.nav-right a::after {
+    content: "";
+    position: absolute;
+
+    left: 0%;
+    bottom: -5px;
+
+    width: 0%;
+    height: 2px;
+    border-radius: 70px;
+
+    background: black;
+
+    transition: 0.4s;
+}
+.nav-right a:hover {
+    color: rgb(55, 56, 56);
+    transform: scale(1.05) translateY(-1px);
+}
+.nav-right a:hover::after {
+    width: 100%;
+}
+
+
+
 .skills {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 .card {
-    background-color: slateblue;
+    background-color: rgba(122, 101, 101, 0.15);
+
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.about {
+    text-align: left;
+    line-height: 1.8;
+    background-color: rgba(122, 101, 101, 0.15);
+    width: 700px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 25px;
+    border-radius: 7px;
+}
+
+.projects {
+    margin-bottom: 60px;
+}
+
+button {
     color: white;
-    padding: 20px;
-    margin: 10px;
+    background-color: rgb(75, 114, 130);
+    padding: 18px 40px;
+    margin-bottom: 100px;
+    margin-top: 40px;
+    border: none;
+
     border-radius: 7px;
     cursor: pointer;
     transition: 0.5s;
 }
-.card:hover {
-    background-color: violet;
-    color: rgb(11, 4, 55);
-    transform: scale(1.05) translateY(-10px);
-    box-shadow: 0px 25px 20px whitesmoke;
-}
-
-.about {
-    background-color: rgba(255, 255, 255, 0.15);
-    width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    border-radius: 20px;
-}
-
-.projects {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: warp;
-}
-
-button {
-    background-color: rgb(75, 114, 130);
-    padding: 18px;
-    margin: 10px;
-    border: 10px;
-    width: 110px;
-    height: 50px;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: 0.4s;
-}
 
 button:hover {
-    background-color: rgb(13, 69, 91);
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    
     color: whitesmoke;
-    transform: scale(1.05) translateY(-10px);
-    box-shadow: 0px 25px 20px whitesmoke;
-    transform: scale(1.05);
+}
+
+.contact-section {
+    margin: 20px auto;
+    padding: 20px 10px;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
 }
 
 footer {
-   padding: 20px;
-}
-footer:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transition: 0.4s;
+   background: rgb(85, 83, 83);
+   font-weight: bolder;
+   padding: 15px;
+   margin-top: 60px;
+   margin-bottom: 2px;
 }
 
 @media (max-width: 768px){
@@ -112,8 +169,4 @@ footer:hover {
     nav{
         gap: 15px;
     }
-    h1{
-        font-size: 32px;
-    }
-
 }
