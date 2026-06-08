@@ -5,16 +5,6 @@ body {
     margin: 0;
 }
 
-.hero {
-    margin-top: 150px;
-    margin-bottom: 100px;
-}
-h1 {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    font-size: 40px;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -79,26 +69,45 @@ nav {
     width: 100%;
 }
 
-
-
-.skills {
+.hero {
+    margin-top: 150px;
+    margin-bottom: 1px;
+}
+h1 {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    font-size: 40px;
+}
+.contact-btn-ctn {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
 }
-.card {
-    background-color: rgba(122, 101, 101, 0.15);
+.contact-btn {
+    color: white;
+    background-color: rgb(75, 114, 130);
+    padding: 18px 40px;
+    margin-bottom: 100px;
+    margin-top: 40px;
+    border: none;
 
-    padding: 25px;
     border-radius: 15px;
-    transition: 0.4s;
+    cursor: pointer;
+    transition: 0.5s;
 }
-.card:hover {
+.contact-btn:hover {
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    
 }
 
-.about {
+.journey {
+    margin-top: 150px;
+}
+.journey-ctn {
+    gap: 40px;
+}
+.journey-cards{
     text-align: left;
     line-height: 1.8;
     background-color: rgba(122, 101, 101, 0.15);
@@ -110,47 +119,80 @@ nav {
 }
 
 .projects {
-    margin-bottom: 60px;
+    margin-top: 150px;
 }
-
-button {
-    color: white;
-    background-color: rgb(75, 114, 130);
-    padding: 18px 40px;
-    margin-bottom: 100px;
-    margin-top: 40px;
-    border: none;
-
-    border-radius: 7px;
-    cursor: pointer;
-    transition: 0.5s;
+.projects-ctn {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
 }
+.projects-cards {
+    background-color: rgba(122, 101, 101, 0.15);
+    gap: 40px;
 
-button:hover {
-    transform: translateY(-2px);
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.projects-cards:hover {
+    transform: scale(1.05) translateY(-5px);
     box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
-    
-    color: whitesmoke;
+}
+
+.resources {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.resources-ctn {
+    margin-top: 150px;
+}
+.resources-cards {
+    background-color: rgba(122, 101, 101, 0.15);
+    cursor: pointer;
+
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.resources-cards:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
 }
 
 .contact-section {
-    margin: 20px auto;
+    margin-top: 100px;
     padding: 20px 10px;
     max-width: 700px;
-    background: rgba(255, 255, 255, 0.45);
-    border-radius: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    
     text-align: center;
+}
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.contact-links a {
     text-decoration: none;
+    color: rgb(75, 114, 130);
+    font-weight: 500;
+    transition: 0.4s;
+}
+.contact-links a:hover {
+    transform: scale(1.05) translateY(-5px);
 }
 html {
     scroll-behavior: smooth;
 }
 
 footer {
-   background: rgb(85, 83, 83);
+   background: rgb(183, 182, 182);
    font-weight: bolder;
    padding: 15px;
-   margin-top: 60px;
+   margin-top: 10px;
    margin-bottom: 2px;
 }
 
