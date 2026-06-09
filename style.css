@@ -63,14 +63,15 @@ nav {
     }
     .nav-right {
     display: none;
-    gap: 15px;
+    width: 100%;
+    gap: 8px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     margin-top: 10px;
     }
     .nav-right.active {
-        display: flex;
+    display: flex;
     }
 }
 
@@ -92,7 +93,7 @@ nav {
     height: 2px;
     border-radius: 70px;
     background: black;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 .nav-right a:hover {
@@ -114,6 +115,7 @@ nav {
     margin: 0 0 20px;
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.05;
+    font-size: 45px;
 }
 
 .hero p {
@@ -197,11 +199,11 @@ nav {
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.resources-ctn {
+.resources {
     margin-top: 150px;
 }
 
-.resources {
+.resources-ctn {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -222,6 +224,29 @@ nav {
     text-align: center;
 }
 
+.resources-cards h3 {
+    margin-bottom: auto;
+}
+
+.resources-cards p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: gray;
+    text-align: left;
+}
+
+.resources-cards a {
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin: 4px 0;
+    color: rgb(3, 23, 55);
+    text-align: left;
+}
+
+.resources-link:hover {
+    letter-spacing: 1px;
+}
 .resources-cards:hover {
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
