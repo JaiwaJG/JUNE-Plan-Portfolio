@@ -8,9 +8,6 @@ body {
     text-align: center;
     margin: 0;
     min-height: 100vh;
-
-    
-
 }
 
 nav {
@@ -212,6 +209,7 @@ nav {
     gap: 40px;
     flex-wrap: wrap;
     padding: 0 20px;
+    margin-bottom: 200px;
 }
 
 .resources-main-cards {
@@ -274,19 +272,18 @@ nav {
 .resources-cards {
     background: rgba(255, 255, 255,0.18);
     color:#111111;
+    
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
 
     border: 1px solid rgba(255, 255, 255, 0.45);
     box-shadow: 
         0 8px 25px rgba(31, 38, 135, 0.15),
-        inset 0 1px 1px rgba(255, 255, 255, 0.4);
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
         inset 0 -1px 1px rgba(255, 255, 255, 0.25);
+
     cursor: pointer;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 25px;
     box-sizing: border-box;
     transition: 0.3s;
 
@@ -295,9 +292,10 @@ nav {
     min-width: 210px;
     max-width: 260px;
     width: 100%;
+
     text-align: center;
 
-    height: 330px;
+    height: 300px;
     overflow-y: auto;
     position: relative;
 }
@@ -357,13 +355,15 @@ nav {
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+#resources-head {
+    padding-bottom: 140px;
+}
+
 .contact-section {
     margin-top: 100px;
-    padding: 20px 10px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .contact-links {
