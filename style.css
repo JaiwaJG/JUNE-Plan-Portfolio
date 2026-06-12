@@ -26,13 +26,16 @@ nav {
 }
 
 .logo {
-    
     display: flex;
     align-items: center;
     gap: 10px;
     font-weight: bold;
     letter-spacing: 4px;
     font-size: 25px;
+}
+
+.logo span {
+    letter-spacing: 2px;
 }
 
 .logo img {
@@ -44,6 +47,12 @@ nav {
     display: flex;
     gap: 25px;
     align-items: center;
+}
+
+.nav-right a {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .menu-btn {
@@ -97,21 +106,21 @@ nav {
     }
 
     .nav-right {
-    display: none;
-    position: absolute;
-    top: 75px;
-    right: 25px;
-    width: 180px;
-    padding:18px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 25px;
+        width: 80px;
+        padding:18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     }
     .nav-right.active {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
     }
     .nav-right a {
         text-align: left;
@@ -167,27 +176,22 @@ nav {
     color: rgb(70, 70, 70);
 }
 
-.contact-btn-ctn {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.social-icons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
 }
 
-.contact-btn {
-    color: white;
-    background-color: rgb(75, 114, 130);
-    padding: 18px 40px;
-    margin: 40px 0 100px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.5s;
+.social-icons a {
+  color: #5f8190;
+  font-size: 28px;
+  transition: 0.3s;
 }
 
-.contact-btn:hover {
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+.social-icons a:hover {
+  transform: translateY(-2px) scale(1.05);
+  color: #2f5f75;
 }
 
 .journey {
@@ -200,7 +204,7 @@ nav {
 }
 .journey-ctn {
     display: grid;
-    gap: 1px;
+    gap: 2px;
     max-width: 900px;
     margin: 10px auto 0;
     padding: 0 20px;
@@ -208,10 +212,10 @@ nav {
 
 .journey-cards {
     text-align: left;
-    line-height: 1.8;
+    line-height: 1.5;
     background-color: rgba(122, 101, 101, 0.15);
     width: 100%;
-    padding: 15px 25px;
+    padding: 10px 25px;
     border-radius: 15px;
     color: rgb(40, 40, 40);
 }
@@ -242,7 +246,7 @@ nav {
 }
 
 .projects-cards:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: scale(1.05) translateY(-2px);
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -408,7 +412,7 @@ nav {
 
 .contact-section {
     max-width: 450px;
-    margin: 50px auto 60px;
+    margin: 60px auto 60px;
     padding: 40px 35px;
     border-radius: 25px;
     background: rgba(122, 101, 101, 0.12);
@@ -480,13 +484,19 @@ footer {
     .nav-right {
         display: none;
         margin-top: 15px;
+        height: 180px;
         gap: 15px;
-        width: 100%;
+        width: 200px;
         justify-content: center;
     }
 
     .nav-right.active {
         display: flex;
+    }
+
+    .nav-right a {
+        width: fit-content;
+        text-align: left;
     }
 
     .hero {
@@ -540,4 +550,62 @@ footer {
     .journey-cards {
         max-width: 100%;
     }
+}
+
+.feedback-section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px;
+}
+
+.feedback-card{
+  width: 100%;
+  max-width: 520px;
+  padding: 40px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.45);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.feedback-card h1{
+  margin-bottom: 15px;
+}
+
+.feedback-card p{
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.feedback-card form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-card input,
+.feedback-card textarea{
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-family: inherit;
+}
+
+.feedback-card textarea{
+  height: 140px;
+  resize: none;
+}
+
+.feedback-card button{
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  background: #5f8190;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
 }
