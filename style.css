@@ -552,7 +552,7 @@ footer {
     }
 }
 
-.feedback-section{
+.feedback-section {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -560,7 +560,7 @@ footer {
   padding: 120px 20px;
 }
 
-.feedback-card{
+.feedback-card {
   width: 100%;
   max-width: 520px;
   padding: 40px;
@@ -570,24 +570,24 @@ footer {
   text-align: center;
 }
 
-.feedback-card h1{
+.feedback-card h1 {
   margin-bottom: 15px;
 }
 
-.feedback-card p{
+.feedback-card p {
   color: #666;
   line-height: 1.6;
   margin-bottom: 25px;
 }
 
-.feedback-card form{
+.feedback-card form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
 .feedback-card input,
-.feedback-card textarea{
+.feedback-card textarea {
   padding: 15px;
   border-radius: 14px;
   border: 1px solid #ddd;
@@ -595,12 +595,12 @@ footer {
   font-family: inherit;
 }
 
-.feedback-card textarea{
+.feedback-card textarea {
   height: 140px;
   resize: none;
 }
 
-.feedback-card button{
+.feedback-card button {
   padding: 15px;
   border: none;
   border-radius: 14px;
@@ -609,3 +609,70 @@ footer {
   font-weight: 700;
   cursor: pointer;
 }
+.sumit-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #5f8190;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.sumit-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.thanks-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px;
+}
+
+.thanks-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 45px 35px;
+  text-align: center;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.45);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  animation: popUp 0.7s ease forwards;
+}
+
+@keyframes popUp{
+  from{
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.thanks-card p {
+  color: #666;
+  margin-bottom: 28px;
+}
+
+.thanks-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #5f8190;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.thanks-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+

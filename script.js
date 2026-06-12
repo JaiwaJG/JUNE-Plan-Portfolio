@@ -18,3 +18,23 @@ navLinks.forEach(link => {
         navRight.classList.remove("active");
     });
 });
+
+const feedbackForm = document.getElementById("feedbackForm");
+
+if (feedbackForm) {
+  feedbackForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(feedbackForm);
+
+    await fetch(feedbackForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    window.location.href = "thanks.html";
+  });
+}
