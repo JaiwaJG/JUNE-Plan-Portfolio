@@ -461,7 +461,7 @@ footer a:hover {
 /* Mobile */
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 44px !important;
+    font-size: 24px !important;
     line-height: 1.15 !important;
   }
   nav {
