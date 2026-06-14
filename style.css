@@ -149,7 +149,7 @@ nav {
   padding: 0 20px;
 }
 
-.hero h1 {
+.hero h2 {
   margin: 0 0 20px;
   font-size: 37px;
   line-height: 1.1;
@@ -460,8 +460,8 @@ footer a:hover {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 24px !important;
+  .hero h2 {
+    font-size: 44px !important;
     line-height: 1.15 !important;
   }
   nav {
