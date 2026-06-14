@@ -662,3 +662,17 @@ footer a:hover {
 .digital-tools h1 {
   margin-top: 60px;
 }
+
+.useful-websites .resource-grid,
+.digital-tools .resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 260px);
+  justify-content: center;
+  gap: 40px;
+}
+
+.useful-websites .resources-cards,
+.digital-tools .resources-cards {
+  max-width: 260px;
+  height: 300px;
+}
