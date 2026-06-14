@@ -41,3 +41,17 @@ if (feedbackForm) {
     }, 1800);
   });
 }
+
+
+const visitorCount = document.getElementById("visitor-count");
+
+if (visitorCount) {
+  fetch("https://api.counterapi.dev/v1/jaiwateam/portfolio/up")
+    .then((res) => res.json())
+    .then((data) => {
+      visitorCount.textContent = data.count;
+    })
+    .catch(() => {
+      visitorCount.textContent = "Unavailable";
+    });
+}

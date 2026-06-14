@@ -370,14 +370,16 @@ nav {
 
 .feedback-card h1,
 .thanks-card h1 {
-  margin-bottom: 15px;
+  margin-bottom: 35px;
+  margin-top: 5px;
 }
 
 .feedback-card p,
 .thanks-card p {
   color: #666666;
-  line-height: 1.6;
+  line-height: 1.2;
   margin-bottom: 25px;
+  text-align: left;
 }
 
 .feedback-card form {
@@ -612,4 +614,11 @@ footer a:hover {
 .terms-card p {
   margin: 0;
   line-height: 1.7;
+}
+
+.visitor-counter {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 14px;
 }
