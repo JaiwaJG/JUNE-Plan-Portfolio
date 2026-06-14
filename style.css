@@ -460,6 +460,10 @@ footer a:hover {
 
 /* Mobile */
 @media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
   nav {
     padding: 14px 24px;
   }
