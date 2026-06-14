@@ -460,10 +460,6 @@ footer a:hover {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 24px;
-    line-height: 1.15;
-  }
   nav {
     padding: 14px 24px;
   }
@@ -505,8 +501,13 @@ footer a:hover {
     margin-top: 120px;
   }
 
-  .hero h1 {
-    font-size: 42px;
+  .hero h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .journey h2 {
+    font-size: 24px;
   }
 
   .learning .resources-ctn,
@@ -534,6 +535,56 @@ footer a:hover {
   .journey-cards {
     max-width: 100%;
   }
+
+  .resources-cards {
+  background: rgba(255, 255, 255, 0.18);
+  color: #111111;
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 8px 25px rgba(31, 38, 135, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  padding: 25px;
+  border-radius: 24px;
+  min-width: 210px;
+  max-width: 260px;
+  width: 100%;
+  height: 300px;
+  overflow-y: auto;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.resources-cards:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.resources-cards p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: gray;
+  text-align: left;
+}
+
+.resources-cards a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  margin: 4px 0;
+  color: rgb(3, 23, 55);
+  text-align: left;
+  transition: 0.2s;
+}
+
+.resources-cards a:hover {
+  transform: translateY(-1px) scale(1.05);
+}
+
 }
 
 .success-overlay {
@@ -649,7 +700,8 @@ footer a:hover {
 .useful-websites .resources-cards,
 .digital-tools .resources-cards {
   width: 100%;
-  max-width: 360px;
+  max-width: 500px;
+  margin: 0 auto 30px auto;
   height: 350px;
   overflow-y: auto;
   text-align: center;
