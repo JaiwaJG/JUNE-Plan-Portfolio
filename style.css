@@ -505,6 +505,12 @@ footer a:hover {
     font-size: 24px;
     line-height: 1.2;
   }
+  .social-icons {
+  margin-top: 67px;
+  display: flex;
+  justify-content: center;
+  gap: 21px;
+  }
 
   .journey h2 {
     font-size: 24px;
