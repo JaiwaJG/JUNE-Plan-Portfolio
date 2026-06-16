@@ -171,12 +171,12 @@ nav {
 
 .social-icons a {
   color: #5f8190;
-  font-size: 24px;
+  font-size: 21px;
   transition: 0.3s;
 }
 
 .social-icons a:hover {
-  transform: translateY(-2px) scale(1.1);
+  transform: translateY(-2px) scale(1.05);
   color: #2f5f75;
 }
 
