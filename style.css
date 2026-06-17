@@ -739,3 +739,63 @@ footer a:hover {
   margin: 0;
   line-height: 1.7;
 }
+
+.youtube-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.youtube-page h1 {
+  font-size: 32px;
+}
+
+.youtube-qr {
+  width: 360px;
+  max-width: 90%;
+  border-radius: 28px;
+}
+
+.youtube-link {
+  background: #ff0000;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.youtube-link {
+  transition: 0.3s ease;
+}
+
+.youtube-link:hover {
+  transform: translateY(-4px) scale(1.03);
+  background: #ff0000;
+  box-shadow: 0 12px 30px rgba(255, 0, 0, 0.35);
+}
+
+.youtube-link:active {
+  transform: scale(0.96);
+}
+
+/* Mobile မှာ QR မပြဘဲ link ပဲပြ */
+@media (max-width: 768px) {
+  .youtube-qr {
+    display: none;
+  }
+
+  .youtube-page h1 {
+    font-size: 24px;
+  }
+
+  .youtube-link {
+    width: 90%;
+    max-width: 320px;
+  }
+}
