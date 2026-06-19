@@ -37,7 +37,7 @@ if (feedbackForm) {
     successOverlay.classList.add("active");
 
     setTimeout(() => {
-      window.location.href = "thanks.html";
+      window.location.href = "/Thank/";
     }, 1800);
   });
 }

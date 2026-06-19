@@ -238,6 +238,16 @@ nav {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+.projects-cards a {
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.projects-cards a:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
 /* Resources Main Section */
 #resources-head {
   padding-bottom: 140px;
