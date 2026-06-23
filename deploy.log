@@ -1,0 +1,20 @@
+> NOTE: The Vercel CLI now collects telemetry regarding usage of the CLI.
+> This information is used to shape the CLI roadmap and prioritize features.
+> You can learn more, including how to opt-out if you'd not like to participate in this program, by visiting the following URL:
+> https://vercel.com/docs/cli/about-telemetry
+Retrieving project…
+Deploying gumsenglat-6356s-projects/june-plan-portfolio
+Uploading [--------------------] (0.0B/134.2KB)
+Uploading [======--------------] (41.2KB/134.2KB)
+Uploading [===========---------] (74.2KB/134.2KB)
+Uploading [================----] (107.7KB/134.2KB)
+Uploading [====================] (134.2KB/134.2KB)
+  Inspect     https://vercel.com/gumsenglat-6356s-projects/june-plan-portfolio/E1EX2z26QaMkvHBFDYoHUSavHzH4
+▲ Production  https://june-plan-portfolio-jiahbywi0-gumsenglat-6356s-projects.vercel.app
+https://june-plan-portfolio-jiahbywi0-gumsenglat-6356s-projects.vercel.appBuilding…
+Building…
+[2K[1A[2K[G▲ Production  https://june-plan-portfolio-jiahbywi0-gumsenglat-6356s-projects.vercel.app
+Completing…
+▲ Aliased     https://june-plan-portfolio.vercel.app
+
+✓ Ready in 7s
