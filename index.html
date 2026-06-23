@@ -3,224 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f8fafc">
+  <meta name="theme-color" content="#fafbfc">
   <meta name="color-scheme" content="light">
-  <title>JAIWA - Digital Resource Ecosystem</title>
-  <meta name="description" content="Discover premium learning resources, AI tools, and digital solutions. Apple-designed resource ecosystem with liquid glass materials.">
+  <title>JAIWA - Apple Liquid Glass Ecosystem</title>
+  <meta name="description" content="Premium digital resource ecosystem with Apple Vision Pro liquid glass design language.">
   <link rel="icon" type="image/png" href="/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
   <!-- Floating Navigation Capsule -->
   <nav>
-    <div class="logo"><span>JAIWA</span></div>
+    <div class="logo">JAIWA</div>
     <div class="nav-right">
       <a href="#resources">Resources</a>
       <a href="#journey">Journey</a>
       <a href="Feedback/">Feedback</a>
       <a href="T&C/">Legal</a>
     </div>
-    <button class="menu-btn">
+    <button class="menu-btn" aria-label="Menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
   </nav>
 
-  <!-- Hero Section - Ecosystem Introduction -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Discover Your Digital Potential</h1>
-      <p>Explore curated learning resources, powerful AI tools, and comprehensive toolkits designed to elevate your skills and accelerate your journey to success.</p>
+      <h1>Digital Excellence Awaits</h1>
+      <p>Curated learning resources, advanced AI tools, and comprehensive toolkits designed to elevate your potential.</p>
     </div>
     <div class="social-icons">
-      <a href="https://facebook.com/jaiwagumsenglat" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="https://instagram.com/jaiwajg" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://t.me/JaiwaJG" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="/YouTube Channel/" title="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.linkedin.com/in/gum-seng-lat-b933a7355" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://facebook.com/jaiwagumsenglat" target="_blank" title="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://instagram.com/jaiwajg" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://t.me/JaiwaJG" target="_blank" title="Telegram">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="/YouTube Channel/" title="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/gum-seng-lat-b933a7355" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
     </div>
   </section>
 
-  <!-- Discovery System - App Store Style -->
+  <!-- Resources Section - Floating Modules -->
   <section id="resources">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 60px 40px;">
-      
-      <!-- Search Bar -->
-      <div class="search-bar">
-        <i class="fas fa-search"></i>
-        <input type="text" id="searchInput" placeholder="Search resources...">
+    <div class="resources-container">
+      <h2 class="section-title">Explore Resources</h2>
+      <div class="floating-modules">
+        <a href="/Learning-Resources/" class="module-card">
+          <div class="module-icon">📚</div>
+          <div class="module-title">Learning Resources</div>
+          <div class="module-description">Master English, digital business, and professional development</div>
+        </a>
+        <a href="/AI-Tools/" class="module-card">
+          <div class="module-icon">🤖</div>
+          <div class="module-title">AI Tools</div>
+          <div class="module-description">Cutting-edge artificial intelligence solutions for productivity</div>
+        </a>
+        <a href="/Online-Success-Toolkit/" class="module-card">
+          <div class="module-icon">🚀</div>
+          <div class="module-title">Online Success</div>
+          <div class="module-description">Digital marketing and online business essentials</div>
+        </a>
+        <a href="/Web-Developer-Toolkit/" class="module-card">
+          <div class="module-icon">💻</div>
+          <div class="module-title">Web Developer</div>
+          <div class="module-description">Comprehensive web development resources and tools</div>
+        </a>
       </div>
-
-      <!-- Category Filters -->
-      <div class="category-filters">
-        <div class="filter-chip active" data-category="all">All</div>
-        <div class="filter-chip" data-category="learning">Learning</div>
-        <div class="filter-chip" data-category="ai">AI Tools</div>
-        <div class="filter-chip" data-category="business">Business</div>
-        <div class="filter-chip" data-category="development">Development</div>
-      </div>
-
-      <!-- Featured Resources -->
-      <div class="discovery-section">
-        <div class="section-header">Featured Resources</div>
-        <div class="featured-carousel">
-          <a href="/Learning-Resources/" class="resource-tile" data-category="learning">
-            <div class="tile-badge">Featured</div>
-            <div class="tile-icon">📚</div>
-            <div class="tile-content">
-              <div class="tile-title">Learning Resources</div>
-              <div class="tile-description">Master English, digital business, and professional skills</div>
-            </div>
-          </a>
-          <a href="/AI-Tools/" class="resource-tile" data-category="ai">
-            <div class="tile-badge">Popular</div>
-            <div class="tile-icon">🤖</div>
-            <div class="tile-content">
-              <div class="tile-title">AI Tools</div>
-              <div class="tile-description">Cutting-edge artificial intelligence solutions</div>
-            </div>
-          </a>
-          <a href="/Online-Success-Toolkit/" class="resource-tile" data-category="business">
-            <div class="tile-badge">Essential</div>
-            <div class="tile-icon">🚀</div>
-            <div class="tile-content">
-              <div class="tile-title">Online Success Toolkit</div>
-              <div class="tile-description">Digital marketing and online business essentials</div>
-            </div>
-          </a>
-          <a href="/Web-Developer-Toolkit/" class="resource-tile" data-category="development">
-            <div class="tile-badge">New</div>
-            <div class="tile-icon">💻</div>
-            <div class="tile-content">
-              <div class="tile-title">Web Developer Toolkit</div>
-              <div class="tile-description">Comprehensive web development resources</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Recently Added -->
-      <div class="discovery-section">
-        <div class="section-header">Recently Added</div>
-        <div class="featured-carousel">
-          <div class="resource-tile" data-category="learning">
-            <div class="tile-icon">📖</div>
-            <div class="tile-content">
-              <div class="tile-title">Advanced English</div>
-              <div class="tile-description">Elevate your language proficiency to expert level</div>
-            </div>
-          </div>
-          <div class="resource-tile" data-category="ai">
-            <div class="tile-icon">🧠</div>
-            <div class="tile-content">
-              <div class="tile-title">AI Fundamentals</div>
-              <div class="tile-description">Understand machine learning and neural networks</div>
-            </div>
-          </div>
-          <div class="resource-tile" data-category="business">
-            <div class="tile-icon">💼</div>
-            <div class="tile-content">
-              <div class="tile-title">Business Strategy</div>
-              <div class="tile-description">Build sustainable growth strategies for success</div>
-            </div>
-          </div>
-          <div class="resource-tile" data-category="development">
-            <div class="tile-icon">⚙️</div>
-            <div class="tile-content">
-              <div class="tile-title">Web Frameworks</div>
-              <div class="tile-description">Master modern frontend and backend technologies</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- Interactive Timeline - Journey -->
+  <!-- Journey Timeline -->
   <section id="journey">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 60px 40px;">
-      <div class="section-header" style="text-align: center; margin-bottom: 60px;">My Journey</div>
-      
-      <div class="timeline-container">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="milestone-card">
-              <div class="milestone-year">2020</div>
-              <div class="milestone-title">The Beginning</div>
-              <div class="milestone-description">Started exploring digital education and online entrepreneurship. Founded the vision of creating a comprehensive resource ecosystem for learners worldwide.</div>
-            </div>
-            <div class="timeline-marker"></div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="milestone-card">
-              <div class="milestone-year">2021</div>
-              <div class="milestone-title">Learning Resources Launch</div>
-              <div class="milestone-description">Launched comprehensive learning materials covering English, digital business, and professional development skills to help students excel.</div>
-            </div>
-            <div class="timeline-marker"></div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="milestone-card">
-              <div class="milestone-year">2022</div>
-              <div class="milestone-title">AI Tools Integration</div>
-              <div class="milestone-description">Expanded ecosystem with cutting-edge AI tools and automation resources for modern professionals seeking productivity enhancement.</div>
-            </div>
-            <div class="timeline-marker"></div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="milestone-card">
-              <div class="milestone-year">2023</div>
-              <div class="milestone-title">Ecosystem Expansion</div>
-              <div class="milestone-description">Added specialized toolkits for online business success and comprehensive web development mastery for aspiring developers.</div>
-            </div>
-            <div class="timeline-marker"></div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="milestone-card">
-              <div class="milestone-year">2024</div>
-              <div class="milestone-title">Premium Experience</div>
-              <div class="milestone-description">Redesigned entire platform with liquid glass materials and Apple-inspired design language for an unparalleled premium user experience.</div>
-            </div>
-            <div class="timeline-marker"></div>
-          </div>
+    <div class="timeline-wrapper">
+      <h2 class="section-title">The Journey</h2>
+      <div class="timeline-grid">
+        <div class="milestone">
+          <div class="year">2020</div>
+          <div class="milestone-title">The Beginning</div>
+          <div class="milestone-text">Founded on a vision to create transformative digital resources for learners worldwide.</div>
+        </div>
+        <div class="milestone">
+          <div class="year">2021</div>
+          <div class="milestone-title">Launch</div>
+          <div class="milestone-text">Launched comprehensive learning materials for professional growth and skill development.</div>
+        </div>
+        <div class="milestone">
+          <div class="year">2022</div>
+          <div class="milestone-title">AI Integration</div>
+          <div class="milestone-text">Expanded ecosystem with cutting-edge AI tools and automation technologies.</div>
+        </div>
+        <div class="milestone">
+          <div class="year">2023</div>
+          <div class="milestone-title">Expansion</div>
+          <div class="milestone-text">Added specialized toolkits for business success and web development mastery.</div>
+        </div>
+        <div class="milestone">
+          <div class="year">2024</div>
+          <div class="milestone-title">Premium Era</div>
+          <div class="milestone-text">Redesigned with Vision Pro aesthetic and Apple-grade liquid glass materials.</div>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 JAIWA Team. All rights reserved. | <a href="T&C/">Terms & Conditions</a> | <a href="Feedback/">Contact</a></p>
+    <p>&copy; 2026 JAIWA Team. <a href="T&C/">Terms</a> | <a href="Feedback/">Feedback</a></p>
   </footer>
-
-  <!-- Bottom Navigation Dock (Mobile) -->
-  <div class="bottom-dock">
-    <div class="dock-item active" onclick="navigateTo('/')">
-      <div class="dock-icon">🏠</div>
-      <div class="dock-label">Home</div>
-    </div>
-    <div class="dock-item" onclick="navigateTo('#resources')">
-      <div class="dock-icon">📚</div>
-      <div class="dock-label">Resources</div>
-    </div>
-    <div class="dock-item" onclick="navigateTo('#journey')">
-      <div class="dock-icon">📍</div>
-      <div class="dock-label">Journey</div>
-    </div>
-    <div class="dock-item" onclick="navigateTo('Feedback/')">
-      <div class="dock-icon">💬</div>
-      <div class="dock-label">Feedback</div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
