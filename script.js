@@ -1,121 +1,183 @@
-// iOS 26 Liquid Glass Material System - Enhanced Interactions
+// iOS 26 Digital Resource Ecosystem - Complete System
 
-// Menu Toggle with Spring Animation
-const menuBtn = document.querySelector(".menu-btn");
-const navRight = document.querySelector(".nav-right");
+// ===============================================
+// Mobile Navigation - Bottom Dock
+// ===============================================
+
+const menuBtn = document.querySelector('.menu-btn');
+const navRight = document.querySelector('.nav-right');
 
 if (menuBtn && navRight) {
-  menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    navRight.classList.toggle("active");
-    document.body.style.overflow = navRight.classList.contains("active") ? "hidden" : "auto";
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    navRight.classList.toggle('active');
   });
 
-  const navLinks = document.querySelectorAll(".nav-right a");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      menuBtn.classList.remove("active");
-      navRight.classList.remove("active");
-      document.body.style.overflow = "auto";
+  const navLinks = document.querySelectorAll('.nav-right a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.remove('active');
+      navRight.classList.remove('active');
     });
   });
 }
 
-// Intersection Observer for Card Entrance Animations
+// Navigation function for dock
+function navigateTo(target) {
+  if (target.startsWith('#')) {
+    const element = document.querySelector(target);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  } else {
+    window.location.href = target;
+  }
+  updateDockActive(target);
+}
+
+function updateDockActive(target) {
+  const dockItems = document.querySelectorAll('.dock-item');
+  dockItems.forEach(item => item.classList.remove('active'));
+  
+  if (target === '/') {
+    dockItems[0].classList.add('active');
+  } else if (target.includes('resources')) {
+    dockItems[1].classList.add('active');
+  } else if (target.includes('journey')) {
+    dockItems[2].classList.add('active');
+  } else if (target.includes('Feedback')) {
+    dockItems[3].classList.add('active');
+  }
+}
+
+// ===============================================
+// Discovery System - Search & Filtering
+// ===============================================
+
+const searchInput = document.getElementById('searchInput');
+const filterChips = document.querySelectorAll('.filter-chip');
+const resourceTiles = document.querySelectorAll('.resource-tile');
+
+let activeCategory = 'all';
+
+// Search functionality
+if (searchInput) {
+  searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    filterResources(searchTerm, activeCategory);
+  });
+}
+
+// Category filtering
+filterChips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    filterChips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeCategory = chip.dataset.category;
+    
+    const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+    filterResources(searchTerm, activeCategory);
+  });
+});
+
+function filterResources(searchTerm, category) {
+  resourceTiles.forEach(tile => {
+    const title = tile.querySelector('.tile-title')?.textContent.toLowerCase() || '';
+    const description = tile.querySelector('.tile-description')?.textContent.toLowerCase() || '';
+    const tileCategory = tile.dataset.category || '';
+    
+    const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+    const matchesCategory = category === 'all' || tileCategory === category;
+    
+    if (matchesSearch && matchesCategory) {
+      tile.style.display = '';
+      tile.style.animation = 'fadeInUp 0.4s ease forwards';
+    } else {
+      tile.style.display = 'none';
+    }
+  });
+}
+
+// ===============================================
+// Scroll Animations - Card Reveals
+// ===============================================
+
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px"
+  rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.style.animation = "fadeInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards";
+      entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
       observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Observe all card elements for staggered animation
-document.querySelectorAll(".journey-card, .resource-card").forEach((card, index) => {
-  card.style.opacity = "0";
+// Observe cards for animation
+document.querySelectorAll('.resource-tile, .milestone-card').forEach((card) => {
+  card.style.opacity = '0';
   observer.observe(card);
 });
 
-// Parallax Effect on Scroll
-window.addEventListener("scroll", () => {
-  const scrolled = window.pageYOffset;
-  const parallaxElements = document.querySelectorAll("#journey::before, #resources::before");
-  
-  parallaxElements.forEach((el) => {
-    el.style.transform = `translateY(${scrolled * 0.5}px)`;
-  });
-});
+// ===============================================
+// Smooth Page Transitions
+// ===============================================
 
-// Resource Card Details Toggle
-function toggleResourceDetails(card) {
-  const isExpanded = card.querySelector(".resource-detail-card");
-  
-  if (!isExpanded) {
-    const detailCard = document.createElement("div");
-    detailCard.className = "resource-detail-card";
-    detailCard.innerHTML = `
-      <p>Premium resources and tools curated for your success.</p>
-      <a href="#">Explore More →</a>
-    `;
-    card.appendChild(detailCard);
-  } else {
-    isExpanded.remove();
-  }
-}
-
-// Feedback Form Submission
-const feedbackForm = document.getElementById("feedbackForm");
-const successOverlay = document.getElementById("successOverlay");
-
-if (feedbackForm) {
-  feedbackForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(feedbackForm);
-
-    await fetch(feedbackForm.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (successOverlay) {
-      successOverlay.classList.add("active");
-      setTimeout(() => {
-        window.location.href = "/Thank/";
-      }, 1800);
-    }
-  });
-}
-
-// Visitor Counter
-const visitorCount = document.getElementById("visitor-count");
-if (visitorCount) {
-  fetch("https://api.counterapi.dev/v1/jaiwateam/portfolio/up")
-    .then((res) => res.json())
-    .then((data) => {
-      visitorCount.textContent = data.count;
-    })
-    .catch(() => {
-      visitorCount.textContent = "Unavailable";
-    });
-}
-
-// Smooth Scroll Enhancement
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   });
+});
+
+// ===============================================
+// Timeline Progress Animation
+// ===============================================
+
+const timelineItems = document.querySelectorAll('.timeline-item');
+let timelineObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+      timelineObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+timelineItems.forEach((item, index) => {
+  item.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s forwards`;
+  item.style.opacity = '0';
+  timelineObserver.observe(item);
+});
+
+// ===============================================
+// Dock Navigation - Active State on Scroll
+// ===============================================
+
+window.addEventListener('scroll', () => {
+  const heroPos = document.querySelector('.hero')?.getBoundingClientRect().bottom || 0;
+  const resourcesPos = document.querySelector('#resources')?.getBoundingClientRect().top || 0;
+  const journeyPos = document.querySelector('#journey')?.getBoundingClientRect().top || 0;
+  
+  const dockItems = document.querySelectorAll('.dock-item');
+  
+  if (heroPos > window.innerHeight / 2) {
+    dockItems.forEach(item => item.classList.remove('active'));
+    dockItems[0].classList.add('active');
+  } else if (resourcesPos < window.innerHeight / 2 && journeyPos > window.innerHeight / 2) {
+    dockItems.forEach(item => item.classList.remove('active'));
+    dockItems[1].classList.add('active');
+  } else if (journeyPos < window.innerHeight / 2) {
+    dockItems.forEach(item => item.classList.remove('active'));
+    dockItems[2].classList.add('active');
+  }
 });
