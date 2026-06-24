@@ -328,7 +328,7 @@ nav {
   font-weight: 700;
   display: block;
   margin: 4px 0;
-  color: rgb(3, 23, 55);
+  color: rgb(48, 11, 123);
   text-align: left;
   transition: 0.2s;
 }
@@ -808,4 +808,15 @@ footer a:hover {
     width: 90%;
     max-width: 320px;
   }
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
 }

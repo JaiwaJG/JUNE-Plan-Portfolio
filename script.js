@@ -42,7 +42,6 @@ if (feedbackForm) {
   });
 }
 
-
 const visitorCount = document.getElementById("visitor-count");
 
 if (visitorCount) {
@@ -55,3 +54,18 @@ if (visitorCount) {
       visitorCount.textContent = "Unavailable";
     });
 }
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  reveals.forEach((item) => {
+    const top = item.getBoundingClientRect().top;
+
+    if (top < window.innerHeight - 100) {
+      item.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
