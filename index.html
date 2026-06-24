@@ -3,141 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fafafa">
-  <meta name="color-scheme" content="light">
-  <title>JAIWA - Personal Learning Ecosystem</title>
-  <meta name="description" content="A personal learning ecosystem curated by Gum Seng Lat. Discover learning resources, AI tools, business strategies, and web development guides.">
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta name="color-scheme" content="light dark" />
+  <title>JAIWA - Resource Discovery Platform</title>
+  <meta name="description" content="Discover curated resources for learning, AI tools, online success, and web development." />
   <link rel="icon" type="image/png" href="/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <!-- Navigation -->
-  <nav>
-    <div class="logo">JAIWA</div>
-    <div class="nav-right">
-      <a href="#resources">Resources</a>
-      <a href="#journey">Journey</a>
-      <a href="/Feedback/">Feedback</a>
-      <a href="/T&C/">Legal</a>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><span>JAIWA</span></div>
+      <button class="menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="#resources">Resources</a>
+        <a href="/Feedback/">Feedback</a>
+        <a href="/T&C/">Terms</a>
+      </div>
     </div>
-    <button class="menu-btn" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to JAIWA</h1>
-    <p>A personal learning ecosystem curated by Gum Seng Lat. Discover resources, tools, and strategies for growth in learning, technology, and business.</p>
-    <div class="social-icons">
-      <a href="https://facebook.com/jaiwagumsenglat" target="_blank" title="Facebook" aria-label="Facebook">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://instagram.com/jaiwajg" target="_blank" title="Instagram" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://t.me/JaiwaJG" target="_blank" title="Telegram" aria-label="Telegram">
-        <i class="fab fa-telegram"></i>
-      </a>
-      <a href="/YouTube Channel/" title="YouTube" aria-label="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/gum-seng-lat-b933a7355" target="_blank" title="LinkedIn" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
+    <div class="hero-content">
+      <h1>Discover Resources for Your Journey</h1>
+      <p>Explore curated learning materials, AI tools, business resources, and developer toolkits curated by Gum Seng Lat.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com/jaiwagumsenglat" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/jaiwajg" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://t.me/JaiwaJG" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="/YouTube Channel/" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/gum-seng-lat-b933a7355" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Bar -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search resources..." class="search-input">
+        <button class="clear-search" id="clearSearch" style="display:none;"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Navigation -->
+  <section class="categories-section">
+    <div class="container">
+      <h2>Browse by Category</h2>
+      <div class="category-grid" id="categoryGrid">
+        <!-- Populated by JavaScript -->
+      </div>
     </div>
   </section>
 
   <!-- Featured Resources -->
-  <section id="resources">
-    <h2 class="section-title">Featured Resources</h2>
-    <div class="floating-modules">
-      <a href="/Learning-Resources/" class="module-card">
-        <div class="module-icon">📚</div>
-        <div class="module-title">Learning Resources</div>
-        <div class="module-description">Master English, digital business, and professional development through curated educational content.</div>
-      </a>
-      <a href="/AI-Tools/" class="module-card">
-        <div class="module-icon">🤖</div>
-        <div class="module-title">AI Tools</div>
-        <div class="module-description">Explore cutting-edge artificial intelligence solutions designed to boost productivity and automate workflows.</div>
-      </a>
-      <a href="/Online-Success-Toolkit/" class="module-card">
-        <div class="module-icon">🚀</div>
-        <div class="module-title">Online Success</div>
-        <div class="module-description">Digital marketing strategies and online business essentials to help you succeed in the digital world.</div>
-      </a>
-      <a href="/Web-Developer-Toolkit/" class="module-card">
-        <div class="module-icon">💻</div>
-        <div class="module-title">Web Developer</div>
-        <div class="module-description">Comprehensive toolkit and resources for modern web development, design, and deployment.</div>
-      </a>
+  <section class="featured-section">
+    <div class="container">
+      <h2>Featured Resources</h2>
+      <div class="featured-grid" id="featuredGrid">
+        <!-- Populated by JavaScript -->
+      </div>
     </div>
   </section>
 
-  <!-- Personal Journey -->
-  <section id="journey">
-    <h2 class="journey-title">My Journey</h2>
-    <p class="journey-intro">This is where I share my learning path, growth milestones, and the evolution of the JAIWA ecosystem. Each year represents a significant step in discovering my passion for technology, business, and education.</p>
-    <div class="timeline-grid">
-      <div class="milestone">
-        <div class="year">2020</div>
-        <div class="milestone-title">The Beginning</div>
-        <div class="milestone-text">Started exploring digital education and entrepreneurship. Discovered my passion for creating valuable resources for learners.</div>
+  <!-- Recently Added -->
+  <section class="recent-section">
+    <div class="container">
+      <h2>Recently Added</h2>
+      <div class="recent-grid" id="recentGrid">
+        <!-- Populated by JavaScript -->
       </div>
-      <div class="milestone">
-        <div class="year">2021</div>
-        <div class="milestone-title">Learning Resources</div>
-        <div class="milestone-text">Launched comprehensive learning materials covering English, digital business, and professional development skills.</div>
+    </div>
+  </section>
+
+  <!-- Filter and Main Grid -->
+  <section id="resources" class="filter-section">
+    <div class="container">
+      <div class="filter-controls">
+        <div class="filter-header">
+          <h2 id="categoryTitle">All Resources</h2>
+          <button class="filter-btn" id="filterToggle"><i class="fas fa-sliders-h"></i> Filter</button>
+        </div>
+        
+        <div class="filter-panel" id="filterPanel" style="display:none;">
+          <div class="filter-group">
+            <label>Category</label>
+            <div class="category-pills" id="categoryPills">
+              <!-- Populated by JavaScript -->
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <label>Subcategory</label>
+            <div class="subcategory-pills" id="subcategoryPills">
+              <!-- Populated by JavaScript -->
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="milestone">
-        <div class="year">2022</div>
-        <div class="milestone-title">AI Integration</div>
-        <div class="milestone-text">Expanded the ecosystem with cutting-edge AI tools and automation resources for modern professionals.</div>
-      </div>
-      <div class="milestone">
-        <div class="year">2023</div>
-        <div class="milestone-title">Ecosystem Growth</div>
-        <div class="milestone-text">Added specialized toolkits for online business success and comprehensive web development mastery.</div>
-      </div>
-      <div class="milestone">
-        <div class="year">2024</div>
-        <div class="milestone-title">Premium Design</div>
-        <div class="milestone-text">Redesigned JAIWA with a focus on discovery, personal branding, and premium user experience for all visitors.</div>
+
+      <div class="resources-grid" id="resourcesGrid">
+        <!-- Populated by JavaScript -->
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 JAIWA. Curated by Gum Seng Lat | <a href="/T&C/">Terms & Conditions</a> | <a href="/Feedback/">Feedback</a></p>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 JAIWA Team | Curated by Gum Seng Lat | 
+        <a href="/T&C/">Terms & Conditions</a> | 
+        <a href="/Feedback/">Feedback</a>
+      </p>
+    </div>
   </footer>
 
   <!-- Mobile Bottom Navigation -->
-  <div class="bottom-nav">
-    <a href="/" class="active">
-      <span class="bottom-nav-icon">🏠</span>
-      <span>Home</span>
-    </a>
-    <a href="#resources">
-      <span class="bottom-nav-icon">📚</span>
-      <span>Resources</span>
-    </a>
-    <a href="#journey">
-      <span class="bottom-nav-icon">📍</span>
-      <span>Journey</span>
-    </a>
-    <a href="/Feedback/">
-      <span class="bottom-nav-icon">💬</span>
-      <span>Feedback</span>
-    </a>
-  </div>
+  <nav class="bottom-nav">
+    <a href="/" class="nav-item active"><span class="icon">🏠</span><span>Home</span></a>
+    <a href="#resources" class="nav-item"><span class="icon">📚</span><span>Resources</span></a>
+    <a href="/Learning-Resources/" class="nav-item"><span class="icon">📖</span><span>Learning</span></a>
+    <a href="/AI-Tools/" class="nav-item"><span class="icon">🤖</span><span>AI Tools</span></a>
+  </nav>
 
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
