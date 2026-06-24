@@ -148,6 +148,7 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   margin-bottom: 80px;
+  min-height: auto;
 }
 
 .module-card {
@@ -162,7 +163,7 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 260px;
+  height: 240px;
   transition: all 0.3s ease;
   color: inherit;
 }
